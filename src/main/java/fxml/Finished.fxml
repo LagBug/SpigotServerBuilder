@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="425.0" prefWidth="710.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="me.lagbug.serverbuilder.controllers.Finished">
+   <children>
+      <ImageView fx:id="backgroundImage" fitHeight="435.0" fitWidth="710.0" pickOnBounds="true">
+         <image>
+            <Image url="@../background.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="closeImage" disable="true" fitHeight="15.0" fitWidth="15.0" layoutX="683.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../cancel.png" />
+         </image>
+      </ImageView>
+      <JFXButton layoutX="681.0" layoutY="13.0" onAction="#onClose" prefHeight="15.0" prefWidth="15.0" text="." textFill="TRANSPARENT" />
+      <Pane layoutX="239.0" layoutY="177.0" prefHeight="81.0" prefWidth="232.0" style="-fx-background-color: #fff; -fx-background-radius: 5;">
+         <effect>
+            <DropShadow color="#979797" />
+         </effect>
+         <children>
+            <JFXButton layoutX="14.0" layoutY="42.0" onAction="#onCreate" prefHeight="25.0" prefWidth="132.0" style="-fx-background-color: #2dd690;" text="Create another server" textFill="WHITE" />
+            <Label alignment="CENTER" layoutX="20.0" layoutY="11.0" prefHeight="0.0" prefWidth="192.0" text="Done, your server has been set up.">
+               <font>
+                  <Font name="Microsoft YaHei UI Light" size="12.0" />
+               </font>
+            </Label>
+            <JFXButton layoutX="169.0" layoutY="43.0" onAction="#onClose" prefHeight="25.0" prefWidth="49.0" style="-fx-background-color: #e05656;" text="Quit" textFill="WHITE" />
+            <Label alignment="CENTER" layoutX="149.0" layoutY="47.0" prefHeight="3.0" prefWidth="15.0" text="or">
+               <font>
+                  <Font name="Microsoft YaHei UI Light" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXProgressBar?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="425.0" prefWidth="710.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="me.lagbug.serverbuilder.controllers.Builder">
+   <children>
+      <Pane layoutX="440.0" layoutY="335.0" prefHeight="45.0" prefWidth="241.0" style="-fx-background-color: 000000; -fx-background-radius: 5;">
+         <effect>
+            <DropShadow color="#979797" />
+         </effect>
+         <children>
+            <JFXTextField fx:id="versionField" focusColor="BLACK" layoutX="14.0" layoutY="10.0" prefHeight="25.0" prefWidth="79.0" promptText="Version" text="latest" unFocusColor="#837f7f" />
+            <JFXButton fx:id="startBtn" layoutX="154.0" layoutY="10.0" onAction="#onBuild" prefHeight="25.0" prefWidth="69.0" style="-fx-background-color: #19bad0;" text="Start" textFill="WHITE" />
+         </children>
+      </Pane>
+      <ImageView fx:id="closeImage" disable="true" fitHeight="15.0" fitWidth="15.0" layoutX="683.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../cancel.png" />
+         </image>
+      </ImageView>
+      <JFXButton layoutX="681.0" layoutY="13.0" onAction="#onClose" prefHeight="15.0" prefWidth="15.0" text="." textFill="TRANSPARENT" />
+      <Pane fx:id="downloadingPane" layoutX="440.0" layoutY="389.0" prefHeight="25.0" prefWidth="241.0" style="-fx-background-color: #fff; -fx-background-radius: 5;" visible="false">
+         <effect>
+            <DropShadow color="#979797" />
+         </effect>
+         <children>
+            <JFXProgressBar fx:id="progressBar" layoutX="21.0" layoutY="18.0" />
+            <Label fx:id="infoLabel" alignment="CENTER" prefHeight="14.0" prefWidth="241.0" text="Downloading...">
+               <font>
+                  <Font name="Microsoft JhengHei UI Light" size="9.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <ImageView fx:id="closeImage1" disable="true" fitHeight="128.0" fitWidth="112.0" layoutX="30.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon.png" />
+         </image>
+      </ImageView>
+      <Pane fx:id="downloadingPane1" layoutX="30.0" layoutY="155.0" prefHeight="15.0" prefWidth="241.0" style="-fx-background-color: #fff; -fx-background-radius: 3;">
+         <effect>
+            <DropShadow color="#979797" />
+         </effect>
+         <children>
+            <Label alignment="CENTER" prefHeight="14.0" prefWidth="241.0" text="Create your own server; easily, safe and fast">
+               <font>
+                  <Font name="Microsoft JhengHei UI Light" size="9.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="472.0" layoutY="89.0" prefHeight="231.0" prefWidth="178.0" style="-fx-background-color: f8f8f8; -fx-background-radius: 3;">
+         <children>
+            <VBox fx:id="chatVbox" layoutX="11.0" layoutY="5.0" prefHeight="221.0" prefWidth="156.0" />
+         </children>
+      </Pane>
+      <Label alignment="CENTER" layoutX="151.0" layoutY="32.0" prefHeight="25.0" prefWidth="95.0" text="Spigot" textFill="WHITE">
+         <font>
+            <Font name="Microsoft JhengHei UI Light" size="31.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="149.0" layoutY="67.0" prefHeight="40.0" prefWidth="95.0" text="Server" textFill="WHITE">
+         <font>
+            <Font name="Microsoft JhengHei UI Light" size="31.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="148.0" layoutY="103.0" prefHeight="40.0" prefWidth="104.0" text="Builder" textFill="WHITE">
+         <font>
+            <Font name="Microsoft JhengHei UI Light" size="31.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="versionField" layoutX="74.0" layoutY="269.0" />
+   </children>
+</AnchorPane>
