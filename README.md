@@ -4,6 +4,9 @@ Easily create a spigot server through a beautiful UI built with JavaFX. You'll n
 ## Prerequisites
 - Java 8+ with JavaFX in order to run.
 
+## Download
+Download the latest version through the releases page: https://github.com/LagBug/SpigotServerBuilder/releases
+
 ## In Action
 These are a few images demostrating the program in action.
 ![alt text](https://i.imgur.com/tCuexDP.png)
